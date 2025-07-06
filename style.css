@@ -1,0 +1,383 @@
+/* Import font inside CSS as fallback if needed */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #DFD6C5;
+  --secondary-color: #B1A48E;
+  --tertiary-color: #916E58;
+  --quaternary-color: #8E886D;
+  --font-family: 'Inter', sans-serif;
+  --max-width: 1687px;
+  --bady-background-color:#1A1C19;
+  --btn-primary-color: #B1A592;
+  --btn-secondary-color: #323025;
+  --text-color:#333333;
+  --text-title-color: #323025;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-color);;
+  background-color: var(--bady-background-color);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 3rem;
+}
+
+.header {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 1.125rem;
+  padding: 1.125rem;
+  color: var(--btn-primary-color);
+}
+.header nav{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  border:1px solid;
+  border-radius:50px;
+}
+
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+nav a {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 400;
+  background-color:none;
+  color: var(--btn-primary-color);
+  border: 1px solid;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.company{
+  padding: 11px 87px 10px 87px;
+}
+.collections{
+  padding: 11px 55px 10px 55px;
+}
+.menu{
+  padding: 11px 71px 10px 72px;
+}
+.events{
+  padding: 11px 54px 10px 53px;
+}
+.contact{
+  padding: 11px 40px 10px 53px;
+}
+
+/* --Card Styles-- */
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+}
+
+  .card-body{
+    padding: 33px 18px;
+    border-bottom: 1px solid;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+  .card-body h1{
+    margin-bottom: 10px;
+}
+  .card-body h1>span{
+    color: var(--text-title-color);
+    border: 1px solid;
+    border-radius: 50px;
+    padding: 5px 30px;;
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+  .card-body h3 {
+    color: var(--text-color);
+    font-size: 24px;;
+    margin-bottom: 20px;
+}
+  .card-body h3>span {
+    text-decoration: underline;
+}
+.card-body-image {  
+    border-radius: 20px;
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+.card-body-image img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.card-footer{
+    padding: 19px 21px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 25px;
+}
+
+ .card-footer p,i{
+    font-size:24px;
+    line-height: 10px;
+}
+
+
+.card-footer-right {
+  width: 25px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-footer-right i:first-child{   
+  transition: transform 0.2s ease;
+}
+.card-footer-right i:last-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.2s ease;
+}
+
+.card-footer-right i:first-child {
+  transform: translateX(-25px);
+}
+.card-footer-right i:last-child {
+  transform: translateX(0px);
+}
+
+/* On Card-Container hover */
+.card-container:hover img {
+    transform: scale(1.05);
+}
+
+.card-container:hover i:first-child {
+  transform: translateX(0px);
+}
+.card-container:hover i:last-child {
+  transform: translateX(25px);
+}
+
+/* --hero section-- */
+ 
+.hero-section{
+    display: grid;
+    grid-template-columns: 0.37fr 0.63fr;
+    gap: 1rem;
+}
+
+.museums{
+    background-color: var(--primary-color);
+    
+}
+
+.museum-info-bg{
+    background-color: var(--quaternary-color);
+}
+
+.potrait-history{
+    background-color: var(--tertiary-color);
+}
+.potrait-author-card{
+    background-color: var(--secondary-color);
+}
+.museum-info-body{
+    display: grid;
+    grid-template-columns: 0.40fr 0.58fr;
+    gap:14px;
+}
+
+
+.museum-info-text h3{
+  margin-bottom: 23px;
+}
+
+.museum-info-text p{
+   font-size:20px;
+   font-weight: 400;
+   text-align:left; 
+}
+
+.border{
+    border: 1px solid red;
+}
+
+.museum-info-body img{
+    max-height:235px;
+    object-fit: cover;
+    object-position: center;
+
+}
+.potrait-section{
+        display: grid;
+        grid-template-columns: 0.46fr 0.56fr;
+        gap: 1.75rem;
+        margin-top: 25px;
+    }
+
+    .potrait-author-body,.potrait-history-body
+    {
+      min-height: 500px;
+    }
+
+.potrait-history-body{
+    padding: 12px;
+    padding-bottom: 26px;
+}
+.potrait-history-body h3 ,.potrait-author-body h3 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-top:6px;
+    margin-bottom: 10px;
+    padding-bottom:13px;
+  
+}
+.museum-history-img{
+    max-height: 168px;
+}
+
+
+
+.potrait-history-body p , .potrait-author-body p {
+    font-size: 1.25rem;
+    text-align: left;
+}
+
+.potrait-author-body{
+    padding: 0 31px;
+    padding-top: 50px;
+    padding-bottom: 13px;
+     display: flex;
+     flex-direction: column;  
+}
+
+.potrait-author-body h1{
+    margin-bottom: 25px;
+}
+.potrait-author-body h3{
+    margin-bottom: 10px;
+}
+
+.author-header-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+}
+
+
+.author-img img {
+  width: 113px;
+  height: 113px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+.potrait-author-body p{
+    font-size: 1.25rem;
+    text-align: left;
+    padding-right:55px;
+}
+/* --------------------
+   Responsive Design
+----------------------- */
+
+/* Tablets */
+@media (max-width: 1550px) {
+ 
+  .hero-section{ 
+    grid-template-columns: 0.34fr 0.66fr;
+}
+.potrait-section{
+        display: grid;
+        grid-template-columns: 0.432fr 0.56fr;
+        gap: 1rem;
+        margin-top: 15px;
+    }
+
+    .potrait-author-body,.potrait-history-body
+    {
+      min-height: 498px;
+    }
+    .potrait-author-body p{
+    padding-right:30px;
+}
+
+}
+@media (max-width: 1200px) {
+  .container ,.header{
+  padding: 1rem;
+}
+
+  .hero-section{
+    grid-template-columns: 1fr;
+}
+
+ .potrait-section{  
+        grid-template-columns: 0.42fr 0.57fr ;
+    }
+
+
+}
+@media (max-width: 768px) {
+  .potrait-section{  
+        grid-template-columns: 1fr;
+    }
+    .museum-info-body{
+    grid-template-columns: 1fr;
+    gap:14px;
+}
+ .potrait-author-body,.potrait-history-body
+    {
+      min-height: 405px;
+    }
+.museum-history-img{
+    max-height: 260px;
+    
+}
+}
+
+/* Mobiles */
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .heading {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .btn-primary {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
