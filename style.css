@@ -8,7 +8,7 @@
   --quaternary-color: #8E886D;
   --font-family: 'Inter', sans-serif;
   --max-width: 1687px;
-  --bady-background-color:#1A1C19;
+  --body-background-color:#1A1C19;
   --btn-primary-color: #B1A592;
   --btn-secondary-color: #323025;
   --text-color:#333333;
@@ -24,7 +24,7 @@
 body {
   font-family: var(--font-family);
   color: var(--text-color);;
-  background-color: var(--bady-background-color);
+  background-color: var(--body-background-color);
 }
 
 .container {
@@ -327,7 +327,10 @@ nav div{
     align-items: flex-start; 
 }
 
-
+.author-img{
+  border-radius: 50%;
+  overflow: hidden;
+}
 .author-img img {
   width: 113px;
   height: 113px;
